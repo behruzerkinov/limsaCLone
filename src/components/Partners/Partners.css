@@ -1,0 +1,80 @@
+.partnersPage {
+  margin-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 8vw;
+}
+
+.partnersPageTexts {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.partnersPage h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.partnersNumbers {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.projectsNumber,
+.clientsNumber {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.numberOfProjects,
+.numberOfClients {
+  color: #6c2dba;
+  font-size: 2.75rem;
+  font-weight: 900;
+  letter-spacing: 0.1ch;
+}
+
+.partnersPageLogos {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 2rem;
+  margin-block: 5rem;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 1.5rem; */
+  height: 100%;
+  transition: all 0.3s ease;
+  padding: 1.5rem;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+  /* margin-bottom: 1rem; */
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.logo h3 {
+  display: flex;
+  align-items: start;
+  font-size: 1.25rem;
+  text-align: start;
+  margin-top: auto;
+}
+
+.logo:hover img {
+  filter: none;
+}

@@ -1,0 +1,155 @@
+.servicesContainer {
+  margin: 0 12vw;
+  
+}
+
+.servicesTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.serviceCard {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 3rem;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.serviceImage {
+  width: 50%;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 1.5rem;
+}
+
+.serviceContent {
+  flex: 1;
+}
+
+.serviceTitle {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.serviceFeatures {
+  list-style-type: none;
+  padding: 0;
+}
+
+.serviceFeatures li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.serviceFeatures li::before {
+  content: "✓ ";
+  color: #4CAF50;
+}
+
+.responsive-design-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.responsive-design-card .serviceImage {
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+}
+
+.responsive-design-card .serviceContent {
+  flex: 1;
+  /* padding-left: 1.5rem; */
+}
+
+.serviceSubtitle {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.serviceDescription {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Your existing styles remain unchanged */
+
+/* ... (keep all your existing styles) ... */
+
+/* New styles for the responsive design card */
+.responsive-design-container {
+  display: flex;
+  align-items: center;
+  padding: 10rem 12vw;
+}
+
+.responsive-design-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.responsive-design-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.responsive-design-content {
+  flex: 1;
+  padding-left: 2rem;
+}
+
+.responsive-design-subtitle {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.responsive-design-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.responsive-design-description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .responsive-design-container {
+    flex-direction: column;
+    padding: 2rem 6vw;
+  }
+
+  .responsive-design-image {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .responsive-design-content {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive-design-card {
+    flex-direction: column;
+  }
+
+  .responsive-design-card .serviceImage {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .responsive-design-card .serviceContent {
+    padding-left: 0;
+  }
+}

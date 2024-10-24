@@ -1,0 +1,66 @@
+.banner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.125rem 0;
+  background-color: #ffffff;
+  font-family: "Inter", sans-serif;
+  margin-inline: 8vw;
+}
+
+.banner-content {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 2.5rem;
+}
+
+.banner-title {
+  font-size: 2.625rem;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.highlight-it {
+  color: #6c2dba;
+}
+
+.highlight-business {
+  color: #8a2be2;
+}
+
+.banner-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.875rem;
+  color: #333;
+}
+
+.contact-button {
+  background-color: #6c2dba;
+  color: white;
+  border: 1px solid #6c2dba;
+  padding: 0.75rem 1.5625rem;
+  font-size: 1rem;
+  border-radius: 1.5625rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: transparent;
+  color: #6c2dba;
+}
+
+.banner-image-container {
+  flex: 1;
+  max-width: 50%;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.625rem;
+}
