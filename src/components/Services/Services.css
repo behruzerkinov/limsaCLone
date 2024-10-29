@@ -79,11 +79,26 @@
   margin-bottom: 1rem;
 }
 
-/* Your existing styles remain unchanged */
+.serviceButton {
+  display: grid;
+  place-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 100vw;
+  background-color: #6c2dba;
+  color: #fff;
+  border: 1px solid #6c2dba;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-top: 5rem;
+  transition: all 0.3s ease;
+}
 
-/* ... (keep all your existing styles) ... */
+.serviceButton:hover {
+  background-color: #fff;
+  color: #6c2dba;
+}
 
-/* New styles for the responsive design card */
 .responsive-design-container {
   display: flex;
   align-items: center;

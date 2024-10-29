@@ -1,0 +1,153 @@
+.feedbacksContainer {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feedbacksLogoContainer {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.feedbacksTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.feedbacksTitle p {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.feedbacksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.feedbackCard {
+  background-color: #302a4c;
+  border-radius: 10px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.avatarContainer {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: #ffffff20;
+}
+
+.avatarContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feedbackName {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.feedbackComment {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+}
+
+.connectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 3rem;
+  padding-block: 3rem;
+  gap: 1.5rem;
+}
+
+.connectionTitle {
+  text-align: center;
+}
+
+.connectionTitle h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.connectionSubtitle {
+  text-align: center;
+}
+
+.connectionSubtitle p {
+  color: #6b717b;
+  font-size: 1.5rem;
+}
+
+.connectionForm {
+  width: 100%;
+  max-width: 50rem;
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+
+  textarea {
+    width: 100%;
+    height: 10rem;
+    padding: .75rem 1rem;
+    border-radius: .7rem;
+    border: 2px solid#858b97;
+    font-family: inherit;
+  }
+
+  textarea:focus {
+    outline: none;
+    border-color: #6c2dba;
+  }
+
+  button {
+    display: inline-block;
+    width: 8rem;
+    padding: .75rem 1rem;
+    border-radius: .7rem;
+    background-color: #6c2dba;
+    color: #fff;
+    font-weight: 600;
+    border: 1px solid #6c2dba;
+    margin-inline: auto;
+    transition: all .3s ease;
+    letter-spacing: 1px;
+  }
+
+  button:hover {
+    background-color: #fff;
+    color: #6c2dba;
+  }
+}
+
+.connectionForm > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+
+  input {
+    width: 100%;
+    padding: .75rem 1rem;
+    border-radius: .7rem;
+    border: 2px solid#858b97;
+    font-family: inherit;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #6c2dba;
+  }
+}
