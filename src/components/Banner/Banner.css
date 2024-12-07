@@ -2,23 +2,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 15vh;
+  padding-top: max(15vh, 5rem);
   min-height: 100vh;
   background-color: #ffffff;
-  margin-inline: 8vw;
-  gap: 2rem;
+  margin-inline: clamp(1rem, 8vw, 8rem);
+  gap: clamp(1rem, 4vw, 2rem);
 }
 
 .banner-content {
   flex: 1;
   max-width: 50%;
-  padding-right: 2.5rem;
+  padding-right: clamp(1rem, 4vw, 2.5rem);
 }
 
 .banner-title {
-  font-size: clamp(2rem, 4vw, 2.625rem);
+  font-size: clamp(1.75rem, 4vw, 2.625rem);
   font-weight: bold;
-  margin-bottom: 1.25rem;
+  margin-bottom: clamp(0.75rem, 2vw, 1.25rem);
   line-height: 1.2;
   text-transform: uppercase;
 }
@@ -30,7 +30,7 @@
 .banner-description {
   font-size: clamp(0.875rem, 2vw, 1rem);
   line-height: 1.5;
-  margin-bottom: 1.875rem;
+  margin-bottom: clamp(1rem, 3vw, 1.875rem);
   color: #333;
 }
 
@@ -38,16 +38,17 @@
   background-color: #6c2dba;
   color: white;
   border: 1px solid #6c2dba;
-  padding: 0.75rem 1.5625rem;
+  padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1.5625rem);
   font-size: clamp(0.875rem, 1.5vw, 1rem);
-  border-radius: 1.5625rem;
+  border-radius: 100vw;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .contact-button:hover {
   background-color: transparent;
   color: #6c2dba;
+  transform: translateY(-2px);
 }
 
 .banner-image-container {
@@ -59,14 +60,14 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 0.625rem;
+  border-radius: clamp(0.5rem, 2vw, 0.625rem);
 }
 
 /* Tablet breakpoint */
 @media (max-width: 1024px) {
   .banner-container {
-    margin-inline: 4vw;
-    padding-top: 12vh;
+    margin-inline: clamp(1rem, 4vw, 2rem);
+    padding-top: max(12vh, 4rem);
   }
 
   .banner-content {
@@ -78,9 +79,10 @@
 @media (max-width: 768px) {
   .banner-container {
     flex-direction: column;
-    margin-inline: 5vw;
-    padding-top: 10vh;
-    gap: 2rem;
+    margin-inline: clamp(1rem, 5vw, 1.5rem);
+    padding-top: max(10vh, 3.5rem);
+    min-height: auto;
+    padding-bottom: 2rem;
     text-align: center;
   }
 
@@ -91,8 +93,17 @@
   }
 
   .banner-image-container {
-    max-width: 100%;
+    max-width: min(100%, 400px);
     order: 2;
+    margin: 0 auto;
+  }
+
+  .banner-title br {
+    display: none;
+  }
+
+  .banner-description br {
+    display: none;
   }
 
   .banner-title {
@@ -103,9 +114,6 @@
   .banner-description {
     font-size: 0.875rem;
     margin-bottom: 1.5rem;
-    br {
-      display: none;
-    }
   }
 
   .contact-button {
@@ -119,10 +127,11 @@
   }
 }
 
-/* Small mobile breakpoint */
+/* Small Mobile breakpoint */
 @media (max-width: 480px) {
   .banner-container {
-    padding-top: 8vh;
+    margin-inline: 1rem;
+    padding-top: max(8vh, 3rem);
   }
 
   .banner-title {
@@ -130,7 +139,12 @@
   }
 
   .banner-description {
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
+  }
+
+  .contact-button {
+    width: 100%;
+    max-width: 280px;
   }
 
   .banner-image {
