@@ -1,126 +1,113 @@
 .servicesContainer {
-  margin: clamp(1rem, 6vw, 12vw);
-  padding: clamp(1rem, 2vw, 2rem);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 5vw, 2rem);
+  overflow: hidden;
 }
 
 .servicesTitle {
   text-align: center;
-  font-size: clamp(1.75rem, 5vw, 2.5rem);
-  margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.servicesTitle h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin-bottom: clamp(0.5rem, 2vw, 1rem);
+  font-weight: 700;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  padding: clamp(1rem, 3vw, 2rem) 0;
 }
 
 .serviceCard {
   display: flex;
-  align-items: center;
-  border: 1px solid #e0e0e0;
-  border-radius: clamp(0.5rem, 2vw, 1rem);
-  padding: clamp(1rem, 4vw, 3rem);
-  gap: clamp(1rem, 3vw, 2rem);
-  margin-bottom: clamp(1rem, 2vw, 1.5rem);
-  flex-direction: row;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+  padding: clamp(1rem, 3vw, 2rem);
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .serviceImage {
-  width: clamp(200px, 100%, 50%);
+  width: clamp(80px, 15vw, 120px);
   height: auto;
-  border-radius: clamp(0.25rem, 1vw, 0.5rem);
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .serviceContent {
   flex: 1;
-  min-width: 280px;
 }
 
 .serviceTitle {
-  font-size: clamp(1.25rem, 3vw, 1.8rem);
-  margin-bottom: clamp(0.5rem, 2vw, 0.75rem);
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  margin-bottom: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 600;
 }
 
 .serviceFeatures {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
-  margin-bottom: clamp(1rem, 3vw, 1.5rem);
+  display: grid;
+  gap: 0.75rem;
 }
 
 .serviceFeatures li {
-  margin-bottom: clamp(0.25rem, 1vw, 0.5rem);
-  font-size: clamp(0.875rem, 2vw, 1.1rem);
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  color: #666;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.5rem;
 }
 
 .serviceFeatures li::before {
-  content: "✓";
-  color: #4CAF50;
-  flex-shrink: 0;
+  content: "•";
+  color: #6c2dba;
+  font-size: 1.5em;
 }
 
 .serviceButton {
-  width: 100%;
-  max-width: 300px;
-  padding: clamp(0.5rem, 2vw, 0.75rem) clamp(0.75rem, 2vw, 1rem);
-  border-radius: 100vw;
-  background-color: #6c2dba;
-  color: #fff;
-  border: 1px solid #6c2dba;
-  font-size: clamp(0.875rem, 2vw, 1.1rem);
-  letter-spacing: 1px;
-  font-weight: bold;
   margin-top: clamp(1.5rem, 4vw, 2rem);
-  transition: all 0.3s ease;
+  padding: 0.75rem 1.5rem;
+  background: #6c2dba;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  font-size: clamp(0.875rem, 2vw, 1rem);
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .serviceButton:hover {
-  background-color: #fff;
-  color: #6c2dba;
+  background: #5a25a0;
   transform: translateY(-2px);
 }
 
 .responsive-design-container {
   display: flex;
   align-items: center;
-  gap: clamp(1rem, 4vw, 3rem);
-  margin-top: clamp(2rem, 6vw, 4rem);
-  flex-wrap: wrap;
+  gap: clamp(2rem, 5vw, 4rem);
+  margin-top: clamp(3rem, 8vw, 6rem);
+}
+
+.responsive-design-content {
+  flex: 1;
 }
 
 .responsive-design-image {
   flex: 1;
-  min-width: 280px;
 }
 
 .responsive-design-image img {
   width: 100%;
   height: auto;
   object-fit: contain;
-}
-
-.responsive-design-content {
-  flex: 1;
-  min-width: 280px;
-}
-
-.responsive-design-subtitle {
-  color: #6c2dba;
-  font-size: clamp(0.875rem, 2vw, 1rem);
-  margin-bottom: clamp(0.5rem, 2vw, 1rem);
-  font-weight: 600;
-}
-
-.responsive-design-title {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  margin-bottom: clamp(0.75rem, 2vw, 1rem);
-  line-height: 1.3;
-}
-
-.responsive-design-description {
-  font-size: clamp(0.875rem, 2vw, 1.1rem);
-  line-height: 1.6;
-  color: #666;
 }
 
 /* Tablet breakpoint */
@@ -138,46 +125,36 @@
 @media (max-width: 768px) {
   .serviceCard {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-  }
-
-  .serviceImage {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 1rem;
+    padding: 1.5rem;
   }
 
   .serviceFeatures {
-    display: inline-block;
     text-align: left;
   }
 
-  .serviceButton {
-    margin: 1.5rem auto 0;
-  }
-
   .responsive-design-container {
-    flex-direction: column-reverse;
+    flex-direction: column;
     text-align: center;
   }
 
-  .responsive-design-content {
-    margin-bottom: 1.5rem;
+  .responsive-design-image {
+    order: -1;
   }
 }
 
 /* Small mobile breakpoint */
 @media (max-width: 480px) {
   .servicesContainer {
-    margin: 0.5rem;
-    padding: 0.5rem;
+    padding: 1rem;
   }
 
   .serviceCard {
     padding: 1rem;
   }
 
-  .serviceFeatures li {
-    font-size: 0.875rem;
+  .serviceButton {
+    width: 100%;
   }
 }

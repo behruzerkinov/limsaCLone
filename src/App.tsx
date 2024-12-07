@@ -6,19 +6,30 @@ import Services from "./components/Services/Services";
 import Feedbacks from "./components/Feedbacks/Feedbacks";
 import Contacts from "./components/Contacts/Contacts";
 import "./App.css";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
-   return (
-      <div>
-         <Navbar />
-         <Banner />
-         <Partners />
-         <Projects />
-         <Services />
-         <Feedbacks />
-         <Contacts />
-      </div>
-   );
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+      mirror: true,
+    });
+  }, []);
+
+  return (
+    <div>
+      <Navbar />
+      <Banner />
+      <Partners />
+      <Projects />
+      <Services />
+      <Feedbacks />
+      <Contacts />
+    </div>
+  );
 }
 
 export default App;

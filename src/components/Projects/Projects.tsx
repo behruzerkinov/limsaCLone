@@ -53,29 +53,29 @@ const projects = [
 
 function Projects() {
    return (
-      <div>
-         <div className="projectsTitle">
-            <p>Chiqarilgan loyihalar</p>
-            <h2>Biz nima qildik?</h2>
+      <div className="projectsContainer">
+         <div className="projectsTitle" data-aos="fade-up">
+            <h2>Bizning loyihalar</h2>
+            <p>Biz bilan hamkorlik qilgan kompaniyalar</p>
          </div>
-         <div className="projectsContainer">
-            {projects.map((project) => {
-               return (
-                  <div className="websiteImgContainer">
-                     <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                     >
-                        <img
-                           loading="lazy"
-                           src={project.imageUrl}
-                           alt={project.title}
-                        />
-                     </a>
+
+         <div className="projectsGrid">
+            {projects.map((project, index) => (
+               <a
+                  key={project.id}
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="websiteImgContainer"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+               >
+                  <img src={project.imageUrl} alt={project.title} />
+                  <div className="websiteOverlay">
+                     <h3>{project.title}</h3>
                   </div>
-               );
-            })}
+               </a>
+            ))}
          </div>
       </div>
    );

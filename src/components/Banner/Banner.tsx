@@ -4,7 +4,7 @@ import bannerImg from "../../assets/bannerImg.png";
 function Banner() {
   return (
     <div className="banner-container">
-      <div className="banner-content">
+      <div className="banner-text" data-aos="fade-right">
         <h1 className="banner-title">
           SIZNING BIZNESINGIZNI RIVOJLANTIRISH UCHUN MUKAMMAL <span className="highlight-it">'IT'</span> YECHIMLAR!
         </h1>
@@ -13,7 +13,7 @@ function Banner() {
         </p>
         <button className="contact-button">Aloqa</button>
       </div>
-      <div className="banner-image-container">
+      <div className="banner-image-container" data-aos="fade-left">
         <img src={bannerImg} alt="Banner" className="banner-image" loading="lazy" />
       </div>
     </div>

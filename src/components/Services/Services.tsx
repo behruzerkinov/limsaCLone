@@ -8,9 +8,11 @@ import responsive from "../../assets/responsive.png";
 function Services() {
   return (
     <div className="servicesContainer">
-      <h2 className="servicesTitle">Xizmat turlari</h2>
+      <div className="servicesTitle" data-aos="fade-up">
+        <h2>Xizmat turlari</h2>
+      </div>
 
-      <div className="serviceCard">
+      <div className="serviceCard" data-aos="fade-up" data-aos-delay="100">
         <img src={serviceWebsite} alt="Veb-sayt" className="serviceImage" />
         <div className="serviceContent">
           <h3 className="serviceTitle">Veb-sayt</h3>
@@ -24,7 +26,7 @@ function Services() {
         </div>
       </div>
 
-      <div className="serviceCard">
+      <div className="serviceCard" data-aos="fade-up" data-aos-delay="200">
         <img
           src={serviceMobile}
           alt="Mobil ilovalar"
@@ -40,7 +42,7 @@ function Services() {
         </div>
       </div>
 
-      <div className="serviceCard">
+      <div className="serviceCard" data-aos="fade-up" data-aos-delay="300">
         <img src={serviceBot} alt="Telegram botlari" className="serviceImage" />
         <div className="serviceContent">
           <h3 className="serviceTitle">Telegram botlari</h3>
@@ -54,7 +56,7 @@ function Services() {
         </div>
       </div>
 
-      <div className="serviceCard">
+      <div className="serviceCard" data-aos="fade-up" data-aos-delay="400">
         <img
           src={serviceDesign}
           alt="Grafika dizayni"
@@ -72,10 +74,7 @@ function Services() {
         </div>
       </div>
       <div className="responsive-design-container">
-        <div className="responsive-design-image">
-          <img src={responsive} alt="Responsive design across devices" />
-        </div>
-        <div className="responsive-design-content">
+        <div className="responsive-design-content" data-aos="fade-right">
           <p className="responsive-design-subtitle">Javobgar</p>
           <h2 className="responsive-design-title">
             Har qanday ekran o'lchamiga mos keladigan veb-ilovalar
@@ -84,6 +83,9 @@ function Services() {
             Startapo veb-saytingiz yoki mobil ilovangiz barcha qurilmalarda
             birdek yaxshi ishlashini ta'minlaydi.
           </p>
+        </div>
+        <div className="responsive-design-image" data-aos="fade-left">
+          <img src={responsive} alt="Responsive design across devices" />
         </div>
       </div>
     </div>
