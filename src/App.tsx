@@ -8,17 +8,17 @@ import Contacts from "./components/Contacts/Contacts";
 import "./App.css";
 
 function App() {
-  return (
-    <div>
-      <Navbar />
-      <Banner />
-      <Partners />
-      <Projects />
-      <Services />
-      <Feedbacks />
-      <Contacts />
-    </div>
-  );
+   return (
+      <div>
+         <Navbar />
+         <Banner />
+         <Partners />
+         <Projects />
+         <Services />
+         <Feedbacks />
+         <Contacts />
+      </div>
+   );
 }
 
 export default App;
