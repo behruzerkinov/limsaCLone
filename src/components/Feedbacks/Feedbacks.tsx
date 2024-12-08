@@ -3,10 +3,15 @@ import "./Feedbacks.css";
 import feedbacksLogo from "../../assets/feedbacksLogo.svg";
 import feedbacksAvatar from "../../assets/feedbacksAvatar.svg";
 
+interface FeedbackItem {
+   name: string;
+   comment: string;
+}
+
 function Feedbacks() {
    const { t } = useTranslation();
 
-   const feedbacks = t('feedbacks.items', { returnObjects: true });
+   const feedbacks: FeedbackItem[] = t('feedbacks.items', { returnObjects: true });
 
    return (
       <div className="feedbacksContainer">
@@ -17,7 +22,7 @@ function Feedbacks() {
             <p>{t('feedbacks.title')}</p>
          </div>
          <div className="feedbacksGrid">
-            {feedbacks.map((feedback: any, index: number) => (
+            {feedbacks.map((feedback, index) => (
                <div key={index} className="feedbackCard">
                   <div className="avatarContainer">
                      <img src={feedbacksAvatar} alt={feedback.name} />
