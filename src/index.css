@@ -1,0 +1,94 @@
+:root {
+   /* Light Theme Colors */
+   --primary-color: #6c2dba;
+   --primary-light: #8a42e3;
+   --primary-dark: #5925a0;
+   --background-color: #ffffff;
+   --card-background: #ffffff;
+   --text-color: #1a1a1a;
+   --text-secondary: #4a4a4a;
+   --text-light: #ffffff;
+   --border-color: rgba(0, 0, 0, 0.1);
+   --hover-color: rgba(108, 45, 186, 0.1);
+   --shadow-color: rgba(0, 0, 0, 0.1);
+   --nav-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   --button-shadow: 0 2px 5px rgba(108, 45, 186, 0.2);
+   --feedback-background: #302a4c;
+   --feedback-text: #ffffff;
+   --footer-border: rgba(0, 0, 0, 0.1);
+   --footer-text: #4a4a4a;
+}
+
+:root.dark {
+   /* Dark Theme Colors */
+   --primary-color: #8a42e3;
+   --primary-light: #9b5be8;
+   --primary-dark: #6c2dba;
+   --background-color: #121212;
+   --card-background: #1e1e1e;
+   --text-color: #ffffff;
+   --text-secondary: #ffffff;
+   --text-light: #ffffff;
+   --border-color: rgba(255, 255, 255, 0.1);
+   --hover-color: rgba(138, 66, 227, 0.2);
+   --shadow-color: rgba(0, 0, 0, 0.3);
+   --nav-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+   --button-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+   --feedback-background: #302a4c;
+   --feedback-text: #ffffff;
+   --footer-border: rgba(255, 255, 255, 0.1);
+   --footer-text: #b3b3b3;
+}
+
+body {
+   margin: 0;
+   background-color: var(--background-color);
+   color: var(--text-color);
+   transition: background-color 0.3s ease;
+}
+
+* {
+   box-sizing: border-box;
+   transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+input,
+textarea,
+button {
+   color: var(--text-color);
+   background-color: var(--input-background);
+   border: 1px solid var(--border-color);
+}
+
+.card,
+.websiteImgContainer,
+.logo {
+   background-color: var(--card-background);
+   border: 1px solid var(--border-color);
+}
+
+.feedbackCard {
+   background-color: var(--feedback-background);
+   border: 1px solid var(--border-color);
+   color: var(--feedback-text);
+}
+
+.websiteOverlay {
+   background-color: rgba(108, 45, 186, 0.9);
+}
+
+.dark .websiteOverlay {
+   background-color: rgba(138, 66, 227, 0.9);
+}
+
+/* Add hover effects */
+button:hover:not(.theme-toggle) {
+   background-color: var(--hover-color);
+}
+
+/* Add shadows */
+.card,
+.websiteImgContainer,
+.feedbackCard {
+   box-shadow: 0 4px 6px var(--shadow-color);
+}

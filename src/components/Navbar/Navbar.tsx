@@ -57,8 +57,8 @@ function Navbar() {
                <div className="logo-container">
                   <img
                      src={limsaLogo}
-                     alt="Limsa Company Logo"
-                     className="logo"
+                     alt="Limsa Logo"
+                     className="nav-logo"
                   />
                </div>
             </div>

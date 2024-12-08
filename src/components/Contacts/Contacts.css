@@ -68,6 +68,15 @@
    transform: translateY(-2px);
 }
 
+.socialLinks a img {
+   transition: transform 0.3s ease;
+}
+
+/* Dark mode specific styles */
+:root.dark .socialLinks a img {
+   filter: invert(100%); /* Change color to black */
+}
+
 .mapContainer {
    flex: 1;
    min-width: 280px;
@@ -91,7 +100,7 @@
    align-items: center;
    justify-content: space-between;
    padding-top: clamp(1.5rem, 3vw, 2rem);
-   border-top: 1px solid #eee;
+   border-top: 1px solid var(--footer-border);
    flex-wrap: wrap;
    gap: 1rem;
    margin-top: clamp(3rem, 8vw, 6rem);
@@ -104,7 +113,7 @@
 }
 
 .footerContainer p {
-   color: #666;
+   color: var(--footer-text);
    font-size: clamp(0.75rem, 2vw, 0.9rem);
 }
 

@@ -67,7 +67,7 @@
 
 .serviceFeatures li {
    font-size: clamp(0.875rem, 2vw, 1rem);
-   color: #666;
+   color: #333;
    display: flex;
    align-items: center;
    gap: 0.75rem;
@@ -131,6 +131,24 @@
    line-height: 1.6;
    color: #666;
    margin-bottom: 2rem;
+}
+
+/* Dark mode specific styles */
+:root.dark .serviceFeatures li {
+   color: #ccc;
+}
+
+:root.dark .servicesTitle h2 {
+   color: #fff;
+}
+
+:root.dark .serviceButton {
+   background-color: #333;
+   color: #fff;
+}
+
+:root.dark .serviceButton:hover {
+   background-color: #444;
 }
 
 /* Tablet breakpoint */

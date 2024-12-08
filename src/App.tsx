@@ -10,6 +10,8 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import './i18n';
+import { ThemeProvider } from "./context/ThemeContext";
+import { ThemeToggle } from "./components/ThemeToggle/ThemeToggle";
 
 function App() {
    useEffect(() => {
@@ -21,15 +23,18 @@ function App() {
    }, []);
 
    return (
-      <div>
-         <Navbar />
-         <Banner />
-         <Partners />
-         <Projects />
-         <Services />
-         <Feedbacks />
-         <Contacts />
-      </div>
+      <ThemeProvider>
+         <div>
+            <Navbar />
+            <ThemeToggle />
+            <Banner />
+            <Partners />
+            <Projects />
+            <Services />
+            <Feedbacks />
+            <Contacts />
+         </div>
+      </ThemeProvider>
    );
 }
 

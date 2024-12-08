@@ -12,19 +12,19 @@ interface FeedbackItem {
 const feedbackItems: FeedbackItem[] = [
    {
       id: 1,
-      nameKey: 'feedbacks.items.0.name',
-      commentKey: 'feedbacks.items.0.comment'
+      nameKey: "feedbacks.items.0.name",
+      commentKey: "feedbacks.items.0.comment",
    },
    {
       id: 2,
-      nameKey: 'feedbacks.items.1.name',
-      commentKey: 'feedbacks.items.1.comment'
+      nameKey: "feedbacks.items.1.name",
+      commentKey: "feedbacks.items.1.comment",
    },
    {
       id: 3,
-      nameKey: 'feedbacks.items.2.name',
-      commentKey: 'feedbacks.items.2.comment'
-   }
+      nameKey: "feedbacks.items.2.name",
+      commentKey: "feedbacks.items.2.comment",
+   },
 ];
 
 function Feedbacks() {
@@ -36,7 +36,7 @@ function Feedbacks() {
             <img src={feedbacksLogo} alt="Feedbacks Logo" />
          </div>
          <div className="feedbacksTitle">
-            <p>{t('feedbacks.title')}</p>
+            <p>{t("feedbacks.title")}</p>
          </div>
          <div className="feedbacksGrid">
             {feedbackItems.map((feedback) => (
@@ -51,29 +51,29 @@ function Feedbacks() {
          </div>
          <div className="connectionContainer">
             <div className="connectionTitle">
-               <h1>{t('feedbacks.connection.title')}</h1>
+               <h1>{t("feedbacks.connection.title")}</h1>
             </div>
             <div className="connectionSubtitle">
-               <p>{t('feedbacks.connection.subtitle')}</p>
+               <p>{t("feedbacks.connection.subtitle")}</p>
             </div>
             <div className="connectionForm">
                <div>
-                  <input 
-                     type="text" 
-                     placeholder={t('contacts.form.name.placeholder')} 
-                     aria-label={t('contacts.form.name.label')}
+                  <input
+                     type="text"
+                     placeholder={t("contacts.form.name.placeholder")}
+                     aria-label={t("contacts.form.name.label")}
                   />
-                  <input 
-                     type="tel" 
-                     placeholder={t('contacts.form.phone.placeholder')}
-                     aria-label={t('contacts.form.phone.label')}
+                  <input
+                     type="tel"
+                     placeholder={t("contacts.form.phone.placeholder")}
+                     aria-label={t("contacts.form.phone.label")}
                   />
                </div>
-               <textarea 
-                  placeholder={t('contacts.form.message.placeholder')}
-                  aria-label={t('contacts.form.message.label')}
+               <textarea
+                  placeholder={t("contacts.form.message.placeholder")}
+                  aria-label={t("contacts.form.message.label")}
                />
-               <button>{t('contacts.form.submit')}</button>
+               <button>{t("contacts.form.submit")}</button>
             </div>
          </div>
       </div>
