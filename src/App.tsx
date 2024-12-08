@@ -9,27 +9,28 @@ import "./App.css";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import './i18n';
 
 function App() {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: false,
-      mirror: true,
-    });
-  }, []);
+   useEffect(() => {
+      AOS.init({
+         duration: 300,
+         once: false,
+         mirror: true,
+      });
+   }, []);
 
-  return (
-    <div>
-      <Navbar />
-      <Banner />
-      <Partners />
-      <Projects />
-      <Services />
-      <Feedbacks />
-      <Contacts />
-    </div>
-  );
+   return (
+      <div>
+         <Navbar />
+         <Banner />
+         <Partners />
+         <Projects />
+         <Services />
+         <Feedbacks />
+         <Contacts />
+      </div>
+   );
 }
 
 export default App;
