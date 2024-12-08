@@ -4,14 +4,31 @@ import feedbacksLogo from "../../assets/feedbacksLogo.svg";
 import feedbacksAvatar from "../../assets/feedbacksAvatar.svg";
 
 interface FeedbackItem {
-   name: string;
-   comment: string;
+   id: number;
+   nameKey: string;
+   commentKey: string;
 }
+
+const feedbackItems: FeedbackItem[] = [
+   {
+      id: 1,
+      nameKey: 'feedbacks.items.0.name',
+      commentKey: 'feedbacks.items.0.comment'
+   },
+   {
+      id: 2,
+      nameKey: 'feedbacks.items.1.name',
+      commentKey: 'feedbacks.items.1.comment'
+   },
+   {
+      id: 3,
+      nameKey: 'feedbacks.items.2.name',
+      commentKey: 'feedbacks.items.2.comment'
+   }
+];
 
 function Feedbacks() {
    const { t } = useTranslation();
-
-   const feedbacks: FeedbackItem[] = t('feedbacks.items', { returnObjects: true });
 
    return (
       <div className="feedbacksContainer">
@@ -22,13 +39,13 @@ function Feedbacks() {
             <p>{t('feedbacks.title')}</p>
          </div>
          <div className="feedbacksGrid">
-            {feedbacks.map((feedback, index) => (
-               <div key={index} className="feedbackCard">
+            {feedbackItems.map((feedback) => (
+               <div key={feedback.id} className="feedbackCard">
                   <div className="avatarContainer">
-                     <img src={feedbacksAvatar} alt={feedback.name} />
+                     <img src={feedbacksAvatar} alt={t(feedback.nameKey)} />
                   </div>
-                  <h3 className="feedbackName">{feedback.name}</h3>
-                  <p className="feedbackComment">{feedback.comment}</p>
+                  <h3 className="feedbackName">{t(feedback.nameKey)}</h3>
+                  <p className="feedbackComment">{t(feedback.commentKey)}</p>
                </div>
             ))}
          </div>
